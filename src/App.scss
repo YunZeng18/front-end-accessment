@@ -1,0 +1,121 @@
+@import "./scssStyle/base";
+@import "./scssStyle/variable";
+
+.App {
+	background-color: $background-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: "Raleway";
+	height: 100vh;
+}
+.container {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	width: 60vw;
+}
+.searchBar {
+	width: 98%;
+	padding: 10px;
+	margin: 10px 10px 0px 10px;
+	border-style: hidden;
+	background-color: transparent;
+	border-bottom: 1px solid $border-color;
+	font-size: larger;
+	color: black;
+	&::placeholder {
+		color: $suggestion-color;
+	}
+	&:focus {
+		outline: none;
+		border-bottom: 1px solid black;
+	}
+}
+.student-list {
+	margin: 0;
+	margin-top: 10px;
+	overflow: auto;
+	height: 60vh;
+}
+
+::-webkit-scrollbar {
+	width: 0; /* Remove scrollbar */
+}
+.card {
+	display: flex;
+	align-items: flex-start;
+	padding: 15px 20px 20px 20px;
+	border-bottom: 1px solid $border-color;
+	&__pic {
+		width: 125px;
+		border: 1px solid $border-color;
+		border-radius: 50%;
+		margin-right: 40px;
+	}
+	&__details-container {
+		width: 100%;
+	}
+	&__name {
+		font-size: 35px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		display: flex;
+	}
+	&__toggle-btn {
+		justify-self: flex-end;
+		border: none;
+		background: none;
+		padding: 0;
+		margin-right: 10px;
+		margin-left: auto;
+		&:hover {
+			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	.toggle-svg:hover {
+		stroke: black;
+	}
+	&__detail {
+		margin-left: 20px;
+		&__grades {
+			margin-top: 10px;
+		}
+		&__tag-list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-left: 20px;
+		}
+		&__tag {
+			padding: 10px;
+			background-color: $background-color;
+			margin-right: 5px;
+			margin-top: 10px;
+			border-radius: 5px;
+		}
+	}
+
+	&__tag__input {
+		width: 150px;
+		padding: 10px;
+		margin: 10px;
+		border-style: hidden;
+		background-color: transparent;
+		border-bottom: 1px solid $border-color;
+		font-size: larger;
+		color: black;
+		&::placeholder {
+			color: $suggestion-color;
+		}
+		&:focus {
+			outline: none;
+			border-bottom: 1px solid black;
+		}
+	}
+}

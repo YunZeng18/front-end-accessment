@@ -1,38 +1,196 @@
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #cecece;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Raleway";
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 60vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchBar {
+  width: 98%;
+  padding: 10px;
+  margin: 10px 10px 0px 10px;
+  border-style: hidden;
+  background-color: transparent;
+  border-bottom: 1px solid #cecece;
+  font-size: larger;
+  color: black;
 }
+
+.searchBar::-webkit-input-placeholder {
+  color: #cecece;
+}
+
+.searchBar:-ms-input-placeholder {
+  color: #cecece;
+}
+
+.searchBar::-ms-input-placeholder {
+  color: #cecece;
+}
+
+.searchBar::placeholder {
+  color: #cecece;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.student-list {
+  margin: 0;
+  margin-top: 10px;
+  overflow: auto;
+  height: 60vh;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar */
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px 20px 20px 20px;
+  border-bottom: 1px solid #cecece;
+}
+
+.card__pic {
+  width: 125px;
+  border: 1px solid #cecece;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+.card__details-container {
+  width: 100%;
+}
+
+.card__name {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__toggle-btn {
+  justify-self: flex-end;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.card__toggle-btn:hover {
+  cursor: pointer;
+}
+
+.card__toggle-btn:focus {
+  outline: none;
+}
+
+.card .toggle-svg:hover {
+  stroke: black;
+}
+
+.card__detail {
+  margin-left: 20px;
+}
+
+.card__detail__grades {
+  margin-top: 10px;
+}
+
+.card__detail__tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.card__detail__tag {
+  padding: 10px;
+  background-color: #cecece;
+  margin-right: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.card__tag__input {
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  border-style: hidden;
+  background-color: transparent;
+  border-bottom: 1px solid #cecece;
+  font-size: larger;
+  color: black;
+}
+
+.card__tag__input::-webkit-input-placeholder {
+  color: #cecece;
+}
+
+.card__tag__input:-ms-input-placeholder {
+  color: #cecece;
+}
+
+.card__tag__input::-ms-input-placeholder {
+  color: #cecece;
+}
+
+.card__tag__input::placeholder {
+  color: #cecece;
+}
+
+.card__tag__input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+/*# sourceMappingURL=App.css.map */
